@@ -1,17 +1,13 @@
 @Library('jenkins_shared_lib') _
-pipeline{
 
+pipeline {
     agent any
-
-    stages{
-
-        stage('Git Chweckout'){
-
-            steps{
-                // git branch: 'main', url: 'https://github.com/vikash-kumar01/mrdevops_java_app.git'
+    stages {
+        stage('Git Checkout') {
+            steps {
                 gitCheckout(
                     branch: 'main',
-                    url: "https://github.com/FouadALLAOUI/mrdevops_java_app.git"
+                    url: 'https://github.com/FouadALLAOUI/mrdevops_java_app.git'
                 )
             }
         }
