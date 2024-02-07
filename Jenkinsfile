@@ -1,4 +1,4 @@
-@Library('jenkins_shared_lib') _
+//@Library('jenkins_shared_lib') _
 
 pipeline {
     agent any
@@ -11,6 +11,14 @@ pipeline {
                 )
             }
         }
+        //stage('Git Checkout') {
+        //    steps {
+        //        gitCheckout(
+        //            branch: 'main',
+        //            url: 'https://github.com/FouadALLAOUI/mrdevops_java_app.git'
+        //        )
+        //    }
+        //}
         //stage('Unit Test maven') {
         //    steps {
         //        script{
