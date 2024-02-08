@@ -33,6 +33,15 @@ pipeline {
                 }
             }
         }
+        //squ_8cea23e7ed22c2ad1a0fcff87134337760b14398
+        stage('Static Code Analysis') {
+            when{ expression{ param.action == 'create' }}
+            steps {
+                script{
+                   statiCodeAnalysis()
+                }
+            }
+        }
 
     }
 }
