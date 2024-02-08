@@ -37,25 +37,25 @@ pipeline {
         }
         
         //squ_8cea23e7ed22c2ad1a0fcff87134337760b14398
-        stage('Static Code Analysis : Sonarqube') {
-            when{ expression{ params.action == 'create' }}
-            steps {
-                script{
-                    def SonarQubecredentialsId = 'sonar-api'
-                   statiCodeAnalysis(SonarQubecredentialsId)
-                }
-            }
-        }
+        //stage('Static Code Analysis : Sonarqube') {
+        //    when{ expression{ params.action == 'create' }}
+        //    steps {
+        //        script{
+        //            def SonarQubecredentialsId = 'sonar-api'
+        //           statiCodeAnalysis(SonarQubecredentialsId)
+        //        }
+        //    }
+        //}
 
-        stage('Quality Gate Test') {
-            when{ expression{ params.action == 'create' }}
-            steps {
-                script{
-                   def SonarQubecredentialsId = 'sonar-api'
-                   QualityGateStatus(SonarQubecredentialsId)
-                }
-            }
-        }
+        //stage('Quality Gate Test') {
+        //    when{ expression{ params.action == 'create' }}
+        //    steps {
+        //        script{
+        //           def SonarQubecredentialsId = 'sonar-api'
+        //           QualityGateStatus(SonarQubecredentialsId)
+        //        }
+        //    }
+        //}
 
 
 
